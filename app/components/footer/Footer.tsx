@@ -11,7 +11,7 @@ const Footer = () => {
                 <a
                     href="https://www.instagram.com/"
                     target="_blank"
-                    className="transition-all duration-500 hover:text-white rounded-md hover:bg-pink-400 hover:dark:bg-pink-600 hover:rounded-md p-2"
+                    className="transition-all duration-500 hover:text-white rounded-md hover:bg-pink-500 hover:dark:bg-pink-600 hover:rounded-md p-2"
                 >
                     <InstagramIcon size={35} className="cursor-pointer" />
                 </a>

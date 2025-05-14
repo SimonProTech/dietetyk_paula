@@ -28,11 +28,6 @@ const MoreInfoAboutMe = () => {
                             <span className="text-lg">Ułożonych jadłospisów</span>
                         </div>
                     </div>
-                    <div className="grid grid-cols-3 gap-10 w-full">
-                        <div className="bg-pink-400">1</div>
-                        <div>2</div>
-                        <div>3</div>
-                    </div>
                 </div>
             </div>
         </section>

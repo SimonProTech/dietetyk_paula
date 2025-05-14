@@ -3,6 +3,7 @@ import HeaderLink from '@/app/components/header/HeaderLink'
 import DarkModeToggle from '@/app/components/header/DarkModelToggle'
 import HeaderLogo from '@/app/components/header/HeaderLogo'
 
+
 const Header = () => {
     return (
         <div className="absolute top-0 z-50 w-full">
