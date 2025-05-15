@@ -2,25 +2,41 @@
 
 import React, { useRef } from 'react'
 import Image from 'next/image'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import {
+    motion,
+    useMotionTemplate,
+    useMotionValueEvent,
+    useScroll,
+    useSpring,
+    useTransform,
+} from 'framer-motion'
 
 const MotionImage = motion(Image)
+
+const INITIAL_HEIGHT = 1000
 
 const OfertaSection = () => {
     const sectionRef = useRef(null)
 
-    const { scrollYProgress } = useScroll({
+    const { scrollYProgress, scrollY } = useScroll({
         target: sectionRef,
         offset: ['start end', 'end start'],
     })
 
-    // Rozszerzanie od rozmiaru laptopa do pełnego ekranu
-    const width = useTransform(scrollYProgress, [0, 1], [251, window.innerWidth])
-    const height = useTransform(scrollYProgress, [0, 1], [140, window.innerHeight])
-    const x = useTransform(scrollYProgress, [0, 1], [495, 0])
-    const y = useTransform(scrollYProgress, [0, 1], [86, 0])
-    const borderRadius = useTransform(scrollYProgress, [0, 0.7], [16, 0])
-    const opacity = useTransform(scrollYProgress, [0.2, 1], [0.4, 1])
+    const opacity = useTransform(scrollYProgress, [INITIAL_HEIGHT, INITIAL_HEIGHT + 500], [1, 0])
+    const inset = useTransform(scrollYProgress, [0, INITIAL_HEIGHT + 500], ['0%', '100%'])
+
+    const clipPath = useTransform(
+        scrollYProgress,
+        [0, 1],
+        ['circle(20% at 50% 50%)', 'circle(150% at 50% 50%)']
+    )
+
+    const smoothClipPath = useSpring(clipPath, {
+        stiffness: 100,
+        damping: 20,
+        mass: 0.5,
+    })
 
     return (
         <section className="relative mt-40">
@@ -28,35 +44,40 @@ const OfertaSection = () => {
                 <h2 className="text-6xl leading-16 font-light text-center">
                     Poznaj pełną ofertę 😍
                 </h2>
+            </div>
 
-                <div className="relative">
-                    <MotionImage
-                        width={600}
-                        height={600}
-                        quality={100}
-                        src="/assets/emojis/paula-with-laptop.png"
-                        alt="Emoji dietetyka trzymającego laptopa"
-                    />
-
-                    {/* Rozszerzająca się sekcja */}
-                    <motion.div
+            <div
+                className="relative w-full"
+                style={{
+                    height: `calc(${INITIAL_HEIGHT}px + 100vh)`,
+                }}
+            >
+                <div ref={sectionRef} className="sticky top-0 h-screen w-full">
+                    <div className="flex justify-center items-center relative mt-20">
+                        <MotionImage
+                            src="/assets/emojis/paula-with-laptop.png"
+                            width={600}
+                            height={600}
+                        />
+                    </div>
+                    <motion.section
                         style={{
-                            position: 'fixed',
-                            top: y,
-                            left: x,
-                            width,
-                            height,
-                            opacity,
-                            borderRadius,
-                            backgroundColor: 'white',
-                            zIndex: 50,
+                            clipPath: smoothClipPath,
+                            WebkitClipPath: smoothClipPath,
+                            backgroundColor: '#0d0d12',
+                            color: 'white',
+                            position: 'absolute',
+                            height: '100vh',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            fontSize: '5rem',
+                            fontWeight: 'bold',
+                            fontFamily: 'serif',
                         }}
-                        className="overflow-hidden shadow-xl"
                     >
-                        <div className="w-full h-full flex items-center justify-center">
-                            <h2 className="text-3xl">To jest pełnoekranowa sekcja 🎉</h2>
-                        </div>
-                    </motion.div>
+                        About
+                    </motion.section>
                 </div>
             </div>
         </section>
