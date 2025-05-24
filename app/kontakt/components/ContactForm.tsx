@@ -5,25 +5,11 @@ import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 
 import { Button } from '@/components/ui/button'
-import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage,
-} from '@/components/ui/form'
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { useForm } from 'react-hook-form'
 
-import {
-    Select,
-    SelectContent,
-    SelectGroup,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from '@/components/ui/select'
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Textarea } from '@/components/ui/textarea'
 import { cn } from '@/lib/utils'
 
@@ -64,12 +50,23 @@ const ContactForm = () => {
         },
     })
 
-    function onSubmit(values: z.infer<typeof contactFormSchema>) {
-        console.log('1234')
-        // Do something with the form values.
-        // ✅ This will be type-safe and validated.
+
+    async function onSubmit(values: z.infer<typeof contactFormSchema>) {
         console.log(values)
+        const data = await fetch('/api/send-email', {
+            method: 'POST',
+            body: JSON.stringify(values),
+        })
+
+        console.log(data)
+
+        const res = await data.json()
+        console.log(res)
+
     }
+
+    const markBorderIfNotEmpty = (field: string) => field !== '' ? 'border-[1px] border-gray-500' : 'border-b-[1px]'
+
 
     return (
         <Form {...form}>
@@ -82,7 +79,7 @@ const ContactForm = () => {
                             <FormLabel className="text-lg font-thin">Imię</FormLabel>
                             <FormControl>
                                 <Input
-                                    className="placeholder:text-lg ring-0 focus-visible:ring-offset-0 focus-visible:ring-1 focus-visible:ring-black focus:border-0 focus:ring-0 hover:placeholder:translate-x-2 placeholder:transition-all hover:border-[1px] transition-all p-8 border-0 border-b-[1px] rounded-none"
+                                    className={`${markBorderIfNotEmpty(field.value)} ${form.formState.errors.firstName ? 'border-[1px]' : 'border-0'} placeholder:text-lg ring-0 focus-visible:ring-offset-0 focus-visible:ring-1 focus-visible:ring-black focus:ring-0 md:hover:placeholder:translate-x-2 placeholder:transition-all transition-all focus-visible:border-[1px] p-8 md:text-lg text-sm rounded-none`}
                                     placeholder="Podaj swoję imię"
                                     type="text"
                                     {...field}
@@ -100,7 +97,7 @@ const ContactForm = () => {
                             <FormLabel className="text-lg font-thin">Nazwisko</FormLabel>
                             <FormControl>
                                 <Input
-                                    className="placeholder:text-lg ring-0 focus-visible:ring-offset-0 focus-visible:ring-1 focus-visible:ring-black focus:border-0 focus:ring-0 hover:placeholder:translate-x-2 placeholder:transition-all hover:border-[1px] transition-all p-8 border-0 border-b-[1px] rounded-none"
+                                    className={`${markBorderIfNotEmpty(field.value)} ${form.formState.errors.lastName ? 'border-[1px]' : 'border-0'} placeholder:text-lg ring-0 focus-visible:ring-offset-0 focus-visible:ring-1 focus-visible:ring-black focus:border-0 focus:ring-0 md:hover:placeholder:translate-x-2 placeholder:transition-all md:hover:border-[1px] transition-all focus-visible:border-b-0 p-8 md:text-lg text-sm rounded-none`}
                                     placeholder="Podaj swoję nazwisko"
                                     type="text"
                                     {...field}
@@ -118,8 +115,8 @@ const ContactForm = () => {
                             <FormLabel className="text-lg font-thin">E-mail</FormLabel>
                             <FormControl>
                                 <Input
-                                    className="placeholder:text-lg ring-0 focus-visible:ring-offset-0 focus-visible:ring-1 focus-visible:ring-black focus:border-0 focus:ring-0 hover:placeholder:translate-x-2 placeholder:transition-all hover:border-[1px] transition-all p-8 border-0 border-b-[1px] rounded-none"
-                                    placeholder="Podaj swój email"
+                                    className={`${markBorderIfNotEmpty(field.value)} ${form.formState.errors.email ? 'border-[1px]' : 'border-0'} placeholder:text-lg ring-0 focus-visible:ring-offset-0 focus-visible:ring-1 md:text-lg focus-visible:ring-black focus:border-0 focus:ring-0 md:hover:placeholder:translate-x-2 placeholder:transition-all hover:border-[1px] transition-all focus-visible:border-b-0 p-8 border-b-[1px] rounded-none`}
+                                    placeholder="Podaj swój e-mail"
                                     type="email"
                                     {...field}
                                 />
@@ -133,10 +130,11 @@ const ContactForm = () => {
                     name="topic"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel className="text-lg font-thin">Temat rozmowy</FormLabel>
+                            <FormLabel className="text-lg font-thin">Wybierz temat rozmowy</FormLabel>
                             <FormControl>
                                 <Select>
-                                    <SelectTrigger className="w-full focus-visible:ring-offset-0 focus-visible:ring-1 focus-visible:ring-black border-b-[1px] border-[1px] rounded-none transition-all text-md p-8">
+                                    <SelectTrigger
+                                        className="w-full focus-visible:ring-offset-0 overflow-hidden md:data-[placeholder]:text-lg text-sm data-[placeholder]:text-sm focus-visible:ring-1 dark:data-[placeholder]:text-white data-[placeholder]:text-black text focus-visible:ring-black dark:border-gray-500 border-gray-500 border-b-[1px] border-[1px] rounded-none transition-all md:text-lg  p-8">
                                         <SelectValue className="p-8" placeholder={field.value} />
                                     </SelectTrigger>
                                     <SelectContent className="z-[999999] relative">
@@ -144,7 +142,7 @@ const ContactForm = () => {
                                             {topicsArray.map((item, index) => {
                                                 return (
                                                     <SelectItem
-                                                        className="p-4 text-md"
+                                                        className={`p-4 text-md `}
                                                         key={index}
                                                         value={item}
                                                     >
@@ -168,7 +166,7 @@ const ContactForm = () => {
                             <FormLabel className="text-lg font-thin">Wiadomość</FormLabel>
                             <FormControl>
                                 <Textarea
-                                    className="placeholder:text-lg min-h-40 max-h-80 text-inherit border-[1px] rounded-none focus-visible:ring-offset-0 focus-visible:ring-1 focus-visible:ring-black focus:border-0 focus:ring-0"
+                                    className={cn(`placeholder:text-lg dark:border-gray-500 border-gray-500 min-h-40 max-h-80 text-inherit rounded-none focus-visible:ring-offset-0 focus-visible:ring-1 focus-visible:ring-black focus:border-0 focus:ring-0 md:text-lg`)}
                                     placeholder="Twoja wiadomość..."
                                     {...field}
                                 />
