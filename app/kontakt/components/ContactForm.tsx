@@ -5,11 +5,25 @@ import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 
 import { Button } from '@/components/ui/button'
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
+import {
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+} from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { useForm } from 'react-hook-form'
 
-import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from '@/components/ui/select'
 import { Textarea } from '@/components/ui/textarea'
 import { cn } from '@/lib/utils'
 
@@ -50,7 +64,6 @@ const ContactForm = () => {
         },
     })
 
-
     async function onSubmit(values: z.infer<typeof contactFormSchema>) {
         console.log(values)
         const data = await fetch('/api/send-email', {
@@ -62,11 +75,10 @@ const ContactForm = () => {
 
         const res = await data.json()
         console.log(res)
-
     }
 
-    const markBorderIfNotEmpty = (field: string) => field !== '' ? 'border-[1px] border-gray-500' : 'border-b-[1px]'
-
+    const markBorderIfNotEmpty = (field: string) =>
+        field !== '' ? 'border-[1px] border-gray-500' : 'border-b-[1px]'
 
     return (
         <Form {...form}>
@@ -79,7 +91,7 @@ const ContactForm = () => {
                             <FormLabel className="text-lg font-thin">Imię</FormLabel>
                             <FormControl>
                                 <Input
-                                    className={`${markBorderIfNotEmpty(field.value)} ${form.formState.errors.firstName ? 'border-[1px]' : 'border-0'} placeholder:text-lg ring-0 focus-visible:ring-offset-0 focus-visible:ring-1 focus-visible:ring-black focus:ring-0 md:hover:placeholder:translate-x-2 placeholder:transition-all transition-all focus-visible:border-[1px] p-8 md:text-lg text-sm rounded-none`}
+                                    className={`${markBorderIfNotEmpty(field.value)} ${form.formState.errors.firstName ? 'border-[1px]' : ''} placeholder:text-[16px] placeholder:duration-500 shadow-none placeholder:transition-all transition-all duration-500 focus-visible:ring-0 ring-offset-0 dark:border-gray-500 border-gray-300 focus-visible:border-pink-500 hover:border-pink-500 py-8 md:text-lg hover:pl-10 pl-8 text-sm rounded-none`}
                                     placeholder="Podaj swoję imię"
                                     type="text"
                                     {...field}
@@ -97,7 +109,7 @@ const ContactForm = () => {
                             <FormLabel className="text-lg font-thin">Nazwisko</FormLabel>
                             <FormControl>
                                 <Input
-                                    className={`${markBorderIfNotEmpty(field.value)} ${form.formState.errors.lastName ? 'border-[1px]' : 'border-0'} placeholder:text-lg ring-0 focus-visible:ring-offset-0 focus-visible:ring-1 focus-visible:ring-black focus:border-0 focus:ring-0 md:hover:placeholder:translate-x-2 placeholder:transition-all md:hover:border-[1px] transition-all focus-visible:border-b-0 p-8 md:text-lg text-sm rounded-none`}
+                                    className={`${markBorderIfNotEmpty(field.value)} ${form.formState.errors.lastName ? 'border-[1px]' : ''} placeholder:text-[16px] dark:border-gray- duration-500 md:hover:border-[1px] border-[1px] focus-visible:ring-0  placeholder:duration-500 dark:border-gray-500 border-gray-300 shadow-none focus-visible:border-pink-500 hover:border-pink-500 transition-all py-8 md:text-lg hover:pl-10 pl-8 text-sm rounded-none`}
                                     placeholder="Podaj swoję nazwisko"
                                     type="text"
                                     {...field}
@@ -115,7 +127,7 @@ const ContactForm = () => {
                             <FormLabel className="text-lg font-thin">E-mail</FormLabel>
                             <FormControl>
                                 <Input
-                                    className={`${markBorderIfNotEmpty(field.value)} ${form.formState.errors.email ? 'border-[1px]' : 'border-0'} placeholder:text-lg ring-0 focus-visible:ring-offset-0 focus-visible:ring-1 md:text-lg focus-visible:ring-black focus:border-0 focus:ring-0 md:hover:placeholder:translate-x-2 placeholder:transition-all hover:border-[1px] transition-all focus-visible:border-b-0 p-8 border-b-[1px] rounded-none`}
+                                    className={`${markBorderIfNotEmpty(field.value)} ${form.formState.errors.email ? 'border-[1px]' : ''} placeholder:text-[16px] placeholder:duration-500 duration-500 md:text-lg hover:border-[1px] focus-visible:ring-0 focus-visible:border-pink-500 hover:border-pink-500 transition-all dark:border-gray-500 shadow-none border-gray-300 py-8 hover:pl-10 pl-8 rounded-none`}
                                     placeholder="Podaj swój e-mail"
                                     type="email"
                                     {...field}
@@ -130,11 +142,12 @@ const ContactForm = () => {
                     name="topic"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel className="text-lg font-thin">Wybierz temat rozmowy</FormLabel>
+                            <FormLabel className="text-lg font-thin">
+                                Wybierz temat rozmowy
+                            </FormLabel>
                             <FormControl>
                                 <Select>
-                                    <SelectTrigger
-                                        className="w-full focus-visible:ring-offset-0 overflow-hidden md:data-[placeholder]:text-lg text-sm data-[placeholder]:text-sm focus-visible:ring-1 dark:data-[placeholder]:text-white data-[placeholder]:text-black text focus-visible:ring-black dark:border-gray-500 border-gray-500 border-b-[1px] border-[1px] rounded-none transition-all md:text-lg  p-8">
+                                    <SelectTrigger className="w-full focus:border-pink-500 overflow-hidden md:data-[placeholder]:text-lg text-sm data-[placeholder]:text-sm focus-visible:ring-1 dark:data-[placeholder]:text-white data-[placeholder]:text-black focus-visible:ring-black dark:border-gray-500 shadow-none border-gray-300 border-b-[1px] border-[1px] rounded-none transition-all md:text-lg  p-8">
                                         <SelectValue className="p-8" placeholder={field.value} />
                                     </SelectTrigger>
                                     <SelectContent className="z-[999999] relative">
@@ -142,7 +155,7 @@ const ContactForm = () => {
                                             {topicsArray.map((item, index) => {
                                                 return (
                                                     <SelectItem
-                                                        className={`p-4 text-md `}
+                                                        className={`p-4 text-md`}
                                                         key={index}
                                                         value={item}
                                                     >
@@ -166,7 +179,9 @@ const ContactForm = () => {
                             <FormLabel className="text-lg font-thin">Wiadomość</FormLabel>
                             <FormControl>
                                 <Textarea
-                                    className={cn(`placeholder:text-lg dark:border-gray-500 border-gray-500 min-h-40 max-h-80 text-inherit rounded-none focus-visible:ring-offset-0 focus-visible:ring-1 focus-visible:ring-black focus:border-0 focus:ring-0 md:text-lg`)}
+                                    className={cn(
+                                        `focus-visible:border-pink-500  py-8 hover:pl-10 pl-8  hover:border-pink-500 duration-500 placeholder:text-[16px] transition-all focus-visible:ring-0 dark:border-gray-500 border-gray-300 min-h-40 max-h-80 text-inherit rounded-none md:text-lg`
+                                    )}
                                     placeholder="Twoja wiadomość..."
                                     {...field}
                                 />
@@ -177,7 +192,7 @@ const ContactForm = () => {
                 />
                 <div className="mt-20 flex justify-center">
                     <Button
-                        className={`${cn('font-bold rounded-none hover:rounded-md dark:hover:text-white hover:bg-pink-400 transition-all duration-500 uppercase text-lg px-12 py-6 cursor-pointer')}`}
+                        className={`${cn('font-bold rounded-none hover:rounded-md dark:hover:text-white dark:hover:bg-pink-600 hover:bg-pink-400 transition-all duration-500 uppercase text-lg px-12 py-6 cursor-pointer')}`}
                         size="lg"
                         type="submit"
                     >
