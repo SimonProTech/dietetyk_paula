@@ -16,15 +16,15 @@ const MoreInfoAboutMe = () => {
                     </h2>
                     <div className="flex items-center w-full gap-60 justify-center">
                         <div className="flex flex-col items-start space-y-2 relative">
-                            <p className="text-6xl">{yearsSince2023}+</p>
+                            <p className="text-6xl font-medium">{yearsSince2023}+</p>
                             <span className="text-lg">Lat doświadczenia</span>
                         </div>
                         <div className="flex flex-col space-y-2">
-                            <p className="text-6xl">30+</p>
+                            <p className="text-6xl font-medium">30+</p>
                             <span className="text-lg">Zadowolonych klientów</span>
                         </div>
                         <div className="flex flex-col  space-y-2">
-                            <p className="text-6xl">100+</p>
+                            <p className="text-6xl font-medium">100+</p>
                             <span className="text-lg">Ułożonych jadłospisów</span>
                         </div>
                     </div>
