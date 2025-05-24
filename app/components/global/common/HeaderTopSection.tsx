@@ -11,13 +11,13 @@ interface HeaderTopSectionProps {
 }
 
 const HeaderTopSection = ({
-    headingMainText,
-    paragraphTopText,
-    children,
-}: HeaderTopSectionProps) => {
+                              headingMainText,
+                              paragraphTopText,
+                              children,
+                          }: HeaderTopSectionProps) => {
     const pathname = usePathname()
     return (
-        <div className="container mx-auto px-5 relative z-[9999]">
+        <div className="container md:pt-0 pt-5 mx-auto px-5 relative z-[9999]">
             <div className="flex justify-between z-50 relative text-center items-center gap-5 flex-col">
                 <div className="flex items-center space-x-2">
                     <Dot size={15} className="text-pink-400" />
