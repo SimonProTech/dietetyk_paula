@@ -40,7 +40,7 @@ const LandingPage = () => {
                             after:left-0
                             after:ease-out
                             after:delay-100
-                            after:dark:bg-pink-600
+                            dark:after:bg-pink-600
                             after:bg-pink-400
                             hover:opacity-100
                             before:content-['']
