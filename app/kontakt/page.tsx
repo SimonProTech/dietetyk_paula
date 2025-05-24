@@ -7,7 +7,7 @@ const Contact = () => {
         <section className="relative">
             <div className="pt-[16vh] flex flex-col md:gap-32 gap-20 items-center w-full relative">
                 <HeaderTopSection paragraphTopText="Skontaktuj się ze mną">
-                    <h1 className="text-6xl leading-18 font-light">
+                    <h1 className="md:text-6xl text-5xl leading-18 font-light">
                         Bo zdrowe jedzenie <br /> to nie musi być rewolucja.
                     </h1>
                 </HeaderTopSection>
