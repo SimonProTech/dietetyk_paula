@@ -51,7 +51,7 @@ const ShowMovingMenuOnDesktop = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 50 }}
                     transition={{ duration: 0.3 }}
-                    className="fixed bottom-10 right-10 z-[99999]"
+                    className="fixed md:bottom-10 md:right-10 bottom-2 right-4 z-[99999]"
                 >
                     <DropdownMenu open={open} onOpenChange={setOpen} modal={false}>
                         <DropdownMenuTrigger className="cursor-pointer">
