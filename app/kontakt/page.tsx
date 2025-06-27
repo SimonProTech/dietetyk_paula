@@ -1,6 +1,6 @@
 import React from 'react'
 import HeaderTopSection from '@/app/components/global/common/HeaderTopSection'
-import ContactForm from '@/app/kontakt/components/ContactForm'
+import { ContactForm } from '@/app/kontakt/components/ContactForm'
 
 const Contact = () => {
     return (
@@ -11,7 +11,7 @@ const Contact = () => {
                         Bo zdrowe jedzenie <br /> to nie musi być rewolucja.
                     </h1>
                 </HeaderTopSection>
-                <div className="md:w-[50%] w-[90%] relative z-[9999]">
+                <div className="md:w-[70%] lg:w-[50%] w-[90%] relative z-[9999]">
                     <ContactForm />
                 </div>
             </div>

@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Footer = () => {
     return (
-        <footer className="pt-40 pb-20 flex flex-col justify-center items-center gap-10">
+        <footer className="md:pt-40 pt-20 pb-20 flex flex-col justify-center items-center gap-10">
             <div className="flex flex-col justify-center items-center gap-10">
                 <HeaderLogo />
                 <a
@@ -39,9 +39,9 @@ const Footer = () => {
                         Kontakt
                     </Link>
                 </div>
-                <small>© {new Date().getFullYear()}</small>
-                <small>
+                <small className="text-center text-sm text-gray-500">
                     Strona stworzona przez: <span className="underline">Szymon Jocek</span>
+                    <br />© {new Date().getFullYear()} — Wszelkie prawa zastrzeżone.
                 </small>
             </div>
         </footer>

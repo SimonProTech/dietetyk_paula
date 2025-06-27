@@ -71,6 +71,39 @@ body {
     font-family: Satoshi, 'serif';
     box-sizing: border-box;
     cursor: default;
+    scroll-behavior: smooth;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-box-shadow: var(--background);
+}
+
+@keyframes animate-bounce-down {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(10px); /* lub inna wartość */
+    }
+}
+@keyframes animate-bounce-down-Y {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(10px); /* lub inna wartość */
+    }
+}
+
+.bounce-down {
+    animation: animate-bounce-down 0.6s ease-in-out infinite alternate;
+}
+
+.bounce-down-y {
+    animation: animate-bounce-down-Y 0.6s ease-in-out infinite alternate;
 }
 
 .custom-grid {
@@ -81,6 +114,17 @@ body {
     right: 0;
     bottom: 0;
     background-size: 10% 20%; /* Tworzymy 10x10 siatkę */
+    pointer-events: none; /* Uniemożliwia interakcje z siatką */
+}
+
+.custom-grid-sm {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: 20% 40%; /* Tworzymy 10x10 siatkę */
     pointer-events: none; /* Uniemożliwia interakcje z siatką */
 }
 
@@ -96,6 +140,10 @@ body {
     width: 8rem;
     height: 30px;
     object-fit: cover;
+}
+
+.style-cursor svg {
+    color: white;
 }
 
 .dark {

@@ -1,26 +1,34 @@
-'use client'
-
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import useCurrentTheme from '@/app/hooks/useCurrentTheme'
 
-const HeaderLogo = () => {
-    const { currentTheme } = useCurrentTheme()
+interface HeaderLogoI {
+    width?: number
+    height?: number
+}
 
-    const logoSrc = currentTheme === 'light' ? '/assets/logo.png' : '/assets/logo-dark.png'
-
+const HeaderLogo = ({ height = 180, width = 180 }: HeaderLogoI) => {
     return (
         <Link
             href="/"
             className="cursor-pointer relative hover:-translate-y-0.5 transition-transform"
         >
             <Image
-                src={logoSrc}
-                width={180}
-                height={180}
+                src="/assets/logo.png"
+                width={width}
+                height={height}
                 priority
-                alt="Dietetyk Paula logo strony internetowej"
+                alt="Logo light"
+                className="block dark:hidden"
+            />
+            <Image
+                src="/assets/logo-dark.png"
+                width={width}
+                height={height}
+                priority
+                alt="Logo dark"
+                className="hidden dark:block"
             />
         </Link>
     )

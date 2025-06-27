@@ -2,23 +2,22 @@ import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 
 const useCurrentTheme = () => {
-    const { setTheme, resolvedTheme } = useTheme()
-
-    const [mounted, setMounted] = useState(false)
+    const { setTheme, theme } = useTheme()
+    const [isMounted, setIsMounted] = useState(false)
 
     useEffect(() => {
-        setMounted(true)
+        setIsMounted(true)
     }, [])
 
-    const currentTheme = mounted ? resolvedTheme : undefined
-
-    const handleChangeColor = () => {
-        setTheme(currentTheme === 'light' ? 'dark' : 'light')
+    const toggleTheme = () => {
+        if (!theme) return // zapobiega błędom, gdy theme nie jest jeszcze dostępne
+        setTheme(theme === 'light' ? 'dark' : 'light')
     }
 
     return {
-        currentTheme,
-        handleChangeColor,
+        toggleTheme,
+        isMounted,
+        theme: isMounted ? theme : null, // kontroluj dostęp do theme
     }
 }
 
