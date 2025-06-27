@@ -46,10 +46,10 @@ export default async function Page({ params }: { params: { offer: string } }) {
                         return (
                             <div
                                 key={index}
-                                className="flex min-[450px]:items-center items-start min-[450px]:flex-row flex-col gap-2 md:gap-5"
+                                className="flex min-[450px]:items-center items-center min-[450px]:flex-row flex-col gap-2 md:gap-5"
                             >
                                 <HandHeart className="text-pink-600 min-w-[25px]" size={25} />
-                                <span className="sm:text-[1rem] dark:text-white text-black text-sm min-[450px]:text-left">
+                                <span className="sm:text-[1rem] dark:text-white text-center text-black text-sm min-[450px]:text-left">
                                     {item}
                                 </span>
                             </div>
@@ -58,7 +58,7 @@ export default async function Page({ params }: { params: { offer: string } }) {
                     {/*<ContactMe />*/}
                 </div>
             </div>
-            <div className="flex justify-center max-w-[50vw] mx-auto text-center leading-12 text-xl w-full items-center pt-20">
+            <div className="flex justify-center lg:max-w-[50vw] mx-auto text-center leading-12 text-xl w-full items-center pt-20">
                 <p className="prose dark:prose-invert mx-auto max-w-2xl text-center text-gray-700 text-lg leading-relaxed">
                     {offer.description}
                 </p>

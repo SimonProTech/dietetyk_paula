@@ -10,13 +10,14 @@ import {
 } from '@/components/ui/dropdown-menu'
 import { Handshake, Home, Mail, Salad } from 'lucide-react'
 import HeaderLogo from '@/app/components/header/HeaderLogo'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useMotionValueEvent, useScroll } from 'framer-motion'
 import DarkModeToggle from '@/app/components/header/DarkModelToggle'
 
 const ShowMovingMenuOnDesktop = () => {
+    const path = usePathname()
     const router = useRouter()
     const [open, setOpen] = useState(false)
     const [show, setShow] = useState(false)
