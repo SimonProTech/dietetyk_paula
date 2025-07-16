@@ -8,7 +8,7 @@ const OfertaCTA = () => {
         <section
             className="relative flex flex-col items-center justify-center text-center px-4 py-20"
             style={{
-                backgroundImage: 'url(http://localhost:3000/assets/ofertaCTA-image.jpg)',
+                backgroundImage: `url(${process.env.NEXT_PUBLIC_WEBSITE_URL}/assets/ofertaCTA-image.jpg)`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundAttachment: 'fixed',
