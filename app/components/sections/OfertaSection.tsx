@@ -52,7 +52,7 @@ const OfertaSection = () => {
                 {/* Pierwszy div - sticky */}
                 <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center">
                     {/* Obrazek */}
-                    <div className="w-full bg-no-repeat bg-center bg-contain h-[80vh] bg-[url('http://localhost:3000/assets/emojis/paula-with-laptop.png')] relative flex justify-center items-center" />
+                    <div className={`w-full bg-no-repeat bg-center bg-contain h-[80vh] bg-[url('${process.env.NEXT_PUBLIC_WEBSITE_URL}/assets/emojis/paula-with-laptop.png')] relative flex justify-center items-center`} />
 
                     {/* Clip-path animowana warstwa */}
                     <motion.div
