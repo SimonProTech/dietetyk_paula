@@ -81,7 +81,7 @@ export const ContactForm = () => {
                 return toast.error(errorMessage)
             }
             setIsSuccess(true)
-            // form.reset()
+            form.reset()
             return toast.success('Twoja wiadomość została wysłana.')
         } catch (e: any) {
             return toast.error(e.message || 'Coś poszło nie tak. Spróbuj ponownie.')
@@ -261,10 +261,10 @@ export const ContactForm = () => {
                                 <a
                                     className="font-bold rounded-full italic"
                                     target="_blank"
-                                    href="mailto:dietetykpaulaantoniak@gmail.com"
+                                    href={`mailto:${process.env.NEXT_PUBLIC_EMAIL_ADDRESS}`}
                                     rel="noreferrer"
                                 >
-                                    dietetykpaulaantoniak@gmail.com (kliknij)
+                                    kontakt@dietetykpaula.pl (kliknij)
                                 </a>
                                 <span
                                     title="Czas do zamknięcia się okna"

@@ -82,7 +82,7 @@ const LookingForSomethingSpecial = () => {
                                                             return (
                                                                 <div
                                                                     key={index}
-                                                                    className="flex min-[450px]:items-center items-start min-[450px]:flex-row flex-col gap-2 md:gap-5"
+                                                                    className="flex min-[450px]:items-center items-start flex-row gap-2 md:gap-5"
                                                                 >
                                                                     <HandHeart
                                                                         className="text-pink-600 dark:text-pink-400 min-w-[25px]"
