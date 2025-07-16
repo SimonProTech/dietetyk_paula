@@ -5,29 +5,29 @@ export const metadata: Metadata = {
     description:
         'Jestem dietetykiem oferującym spersonalizowane jadłospisy i konsultacje online. Pomagam w osiągnięciu celów żywieniowych i zdrowego stylu życia.',
     icons: {
-        icon: '/favicon.ico',
-        apple: '/apple-touch-icon.png',
+        icon: [{ url: '/favicon.ico' }],
+        apple: [{ url: '/apple-touch-icon.png' }],
     },
-    metadataBase: new URL('https://dietetykpaula.pl'),
+    metadataBase: new URL(`${process.env.NEXT_PUBLIC_WEBSITE_URL}`),
     alternates: {
-        canonical: '/',
+        canonical: `${process.env.NEXT_PUBLIC_WEBSITE_URL}`,
     },
     openGraph: {
         type: 'website',
         locale: 'pl_PL',
-        url: 'https://dietetykpaula.pl',
+        url: `${process.env.NEXT_PUBLIC_WEBSITE_URL}`,
         title: 'Dietetyk Paula',
         siteName: 'Dietetyk Paula',
         description:
             'Jestem dietetykiem oferującym spersonalizowane jadłospisy i konsultacje online. Pomagam w osiągnięciu celów żywieniowych i zdrowego stylu życia.',
         images: [
             {
-                url: 'https://dietetykpaula.pl/assets/og_default_image.png',
+                url: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/assets/og_default_image.png`,
                 alt: 'Zachęcający obraz przedstawiający zdrowe i kolorowe danie, idealne dla każdego, kto dąży do lepszego żywienia. Przygotowane z najświeższych składników, z miłością do smaku i dobroci.',
                 type: 'image/jpg',
                 width: 1200,
                 height: 630,
-                secureUrl: 'https://dietetykpaula.pl/assets/og_default_image.png',
+                secureUrl: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/assets/og_default_image.png`,
             },
         ],
     },

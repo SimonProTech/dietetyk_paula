@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fbfdec40-ab0d-4dd8-abd1-4f5466db5b44" name="Changes" comment="fixing bugs">
+      <change afterPath="$PROJECT_DIR$/app/components/global/common/NavDrawer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/global/common/ScrollTop.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/global/modal-nav-provider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/header/HeaderMenuButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/landingpage/LandingPageBottomAnimationComponent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/offer/FullPlan.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/offer/HeaderImageAnimation.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/offer/OfferPriceTag.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/offer/OfferSeparator.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/offer/OfferTab.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/offer/OfferWhatYouGet.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/hooks/useHash.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/hooks/useThrottle.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/kontakt/components/ContactForm.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/not-found.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/transparent_grid.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/contact-schema-z.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/scrollToRefId.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vitest.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/send-email/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/send-email/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/global/ShowMovingMenuOnDesktop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/global/ShowMovingMenuOnDesktop.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/global/common/HeaderTopSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/global/common/HeaderTopSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/global/common/ScrollBottomMarqComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/global/common/ScrollBottomMarqComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/header/DarkModelToggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/header/DarkModelToggle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/header/HeaderDesktop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/header/HeaderDesktop.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/header/HeaderLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/header/HeaderLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/header/HeaderMobile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/header/HeaderMobile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/landingpage/LandingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/landingpage/LandingPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/offer/Consulting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/offer/Consulting.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/offer/ContactMe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/offer/ContactMe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/offer/FoodPlan.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/offer/FoodPlan.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/offer/HeaderOfferInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/offer/HeaderOfferInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/offer/Step.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/offer/Step.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/sections/AboutMeGridComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/sections/AboutMeGridComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/sections/FAQ.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/sections/FAQ.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/sections/LookingForSomethingSpecial.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/sections/LookingForSomethingSpecial.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/sections/MoreInfoAboutMe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/sections/MoreInfoAboutMe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/sections/OfertaCTA.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/sections/OfertaCTA.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/sections/OfertaSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/sections/OfertaSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/kontakt/components/ContactForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/kontakt/components/ContactForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/oferta/[offer]/loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/oferta/[offer]/loading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/oferta/[offer]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/oferta/[offer]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/file.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/globe.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/next.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/window.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/FAQ.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/FAQ.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/metadata-seo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/metadata-seo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/oferta-static-db.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/oferta-static-db.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;SimonProTech&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/SimonProTech/dietetyk_paula.git&quot;,
+    &quot;accountId&quot;: &quot;709c928c-7412-411c-a0d2-337712756373&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2x3LEhcKlWbilFmeGc1hSj0TKZx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.Next.js: debug client-side.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Vitest.ContactForm.executor": "Run",
+    "Vitest.ContactForm.wysyła formularz i pokazuje bład.executor": "Run",
+    "Vitest.ContactForm.wysyła formularz i pokazuje sukces.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.nodejs.core.library.configured.version": "22.15.0",
+    "javascript.nodejs.core.library.typings.version": "22.15.18",
+    "js.debugger.nextJs.config.created.client": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "P:/paula_strona_2025/dietetyk_paula/public/assets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/User/AppData/Roaming/JetBrains/WebStorm2025.1/node/versions/22.16.0/node",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.dev.executor": "Run",
+    "npm.start.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "P:\\paula_strona_2025\\dietetyk_paula\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "ts.external.directory.path": "P:\\paula_strona_2025\\dietetyk_paula\\node_modules\\typescript\\lib"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="P:\paula_strona_2025\dietetyk_paula\public\assets" />
+      <recent name="P:\paula_strona_2025\dietetyk_paula\public" />
+      <recent name="P:\paula_strona_2025\dietetyk_paula\app" />
+      <recent name="P:\paula_strona_2025\dietetyk_paula\public\assets\emojis" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="P:\paula_strona_2025\dietetyk_paula\app" />
+      <recent name="P:\paula_strona_2025\dietetyk_paula\public" />
+      <recent name="P:\paula_strona_2025\dietetyk_paula\public\assets" />
+      <recent name="P:\paula_strona_2025\dietetyk_paula\app\components\offer" />
+      <recent name="P:\paula_strona_2025\dietetyk_paula\app\api\offers\[offer]" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Vitest.ContactForm.wysyła formularz i pokazuje bład">
+    <configuration name="ContactForm" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/app/kontakt/components/ContactForm.test.tsx" />
+      <test-names>
+        <test-name value="ContactForm" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="ContactForm.wysyła formularz i pokazuje bład" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/app/kontakt/components/ContactForm.test.tsx" />
+      <test-names>
+        <test-name value="ContactForm" />
+        <test-name value="wysyła formularz i pokazuje bład" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="ContactForm.wysyła formularz i pokazuje sukces" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/app/kontakt/components/ContactForm.test.tsx" />
+      <test-names>
+        <test-name value="ContactForm" />
+        <test-name value="wysyła formularz i pokazuje sukces" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Vitest.ContactForm.wysyła formularz i pokazuje bład" />
+        <item itemvalue="Vitest.ContactForm" />
+        <item itemvalue="Vitest.ContactForm.wysyła formularz i pokazuje sukces" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-WS-251.25410.117" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fbfdec40-ab0d-4dd8-abd1-4f5466db5b44" name="Changes" comment="" />
+      <created>1747161700302</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747161700302</updated>
+      <workItem from="1747161701318" duration="1954000" />
+      <workItem from="1747235760452" duration="168000" />
+      <workItem from="1747235940206" duration="121000" />
+      <workItem from="1747236260303" duration="523000" />
+      <workItem from="1747236804685" duration="501000" />
+      <workItem from="1747237520137" duration="333000" />
+      <workItem from="1747237865383" duration="24000" />
+      <workItem from="1747237901175" duration="43567000" />
+      <workItem from="1748278952944" duration="39856000" />
+      <workItem from="1748965843226" duration="23632000" />
+      <workItem from="1749230143052" duration="47815000" />
+      <workItem from="1749665373117" duration="13995000" />
+      <workItem from="1749971172341" duration="67000000" />
+      <workItem from="1750688466898" duration="45728000" />
+      <workItem from="1751393581858" duration="17653000" />
+      <workItem from="1751564939875" duration="25045000" />
+      <workItem from="1751728092282" duration="8470000" />
+      <workItem from="1751749517090" duration="10647000" />
+      <workItem from="1751988672659" duration="197000" />
+      <workItem from="1751988935588" duration="2857000" />
+      <workItem from="1751993290138" duration="962000" />
+      <workItem from="1751994634297" duration="4256000" />
+      <workItem from="1752086120183" duration="238000" />
+      <workItem from="1752161358161" duration="5653000" />
+      <workItem from="1752226793341" duration="15224000" />
+      <workItem from="1752426033313" duration="404000" />
+      <workItem from="1752426458038" duration="25823000" />
+    </task>
+    <task id="LOCAL-00001" summary="working in progress">
+      <option name="closed" value="true" />
+      <created>1747252471230</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747252471230</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fixing problems">
+      <option name="closed" value="true" />
+      <created>1747252554218</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747252554218</updated>
+    </task>
+    <task id="LOCAL-00003" summary="working in progress on an offer section">
+      <option name="closed" value="true" />
+      <created>1747308709849</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747308709849</updated>
+    </task>
+    <task id="LOCAL-00004" summary="job done about styling the contact form, the next step is to add email sending functionality">
+      <option name="closed" value="true" />
+      <created>1748079163110</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1748079163110</updated>
+    </task>
+    <task id="LOCAL-00005" summary="almost finished project">
+      <option name="closed" value="true" />
+      <created>1751022287440</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1751022287440</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fixing bugs">
+      <option name="closed" value="true" />
+      <created>1751024696837</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1751024696837</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="working in progress" />
+    <MESSAGE value="fixing problems" />
+    <MESSAGE value="working in progress on an offer section" />
+    <MESSAGE value="job done about styling the contact form, the next step is to add email sending functionality" />
+    <MESSAGE value="almost finished project" />
+    <MESSAGE value="fixing bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing bugs" />
+  </component>
+</project>

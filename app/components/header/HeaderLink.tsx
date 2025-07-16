@@ -3,24 +3,27 @@
 import React from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
-
+import { scrollToElement } from '@/utils/scrollToRefId'
 interface HeaderLinkProps {
     text: string
-    path: string
+    path?: string
 }
 
 const HeaderLink = ({ text, path }: HeaderLinkProps) => {
     const pathName = usePathname()
     const router = useRouter()
-    const scrollToElement = async () => {
-        if (path === '/kontakt') return router.push('/kontakt')
-        const offer = document.getElementById('oferta')
-        if (offer) return offer.scrollIntoView({ behavior: 'smooth', block: 'start' })
+
+    const handleClick = () => {
+        if (!path) return
+        scrollToElement(path, router)
     }
+
+
     return (
         <Button
-            onClick={scrollToElement}
-            variant="header"
+            title={text === 'FAQ' ? 'Najszczęstsze pytania' : ''}
+            onClick={handleClick}
+            variant="default_empty"
             className={`text-lg
             cursor-pointer
             font-normal
@@ -38,7 +41,7 @@ const HeaderLink = ({ text, path }: HeaderLinkProps) => {
              after:-translate-y-1/2
              after:text-2xl
              ${pathName === '/' && 'after:w-[2px]'}
-             ${pathName === path ? 'after:w-full' : 'after:w-[2px]'}
+             ${pathName.split('/')[1] === path ? 'after:w-full' : 'after:w-[2px]'}
              hover:after:w-full
              after:absolute
              after:left-1/2

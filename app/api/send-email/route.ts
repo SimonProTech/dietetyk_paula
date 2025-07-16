@@ -2,22 +2,37 @@ import { Resend } from 'resend'
 import ContactFormEmailTemplate from '@/app/components/email/ContactFormEmailTemplate'
 import { EmailBody } from '@/types/app'
 import { cookies } from 'next/headers'
+import { Redis } from '@upstash/redis'
+import { Ratelimit } from '@upstash/ratelimit'
 
 const resend = new Resend(process.env.API_KEY_RESEND)
 
+
+const redis = Redis.fromEnv()
+
+const ratelimit = new Ratelimit({
+    redis: redis,
+    limiter: Ratelimit.slidingWindow(1, "24 h"),
+})
+
 export async function POST(req: Request) {
+    const ip =
+        req.headers.get("x-forwarded-for")?.split(",")[0] ??
+        "unknown"
+    const { success } = await ratelimit.limit(ip)
     const cookie = await cookies()
 
-    if (cookie.get('email_submitting')) {
+    if (cookie.get('email_submitting') && !success) {
         return Response.json(
             { errorMessage: 'Wiadomość została już wysłana. Spróbuj ponownie za 24h.' },
             { status: 429 }
         )
     }
+
     try {
         const { message, topic, email, lastName, firstName } = (await req.json()) as EmailBody
         const { data, error } = await resend.emails.send({
-            from: 'onboarding@resend.dev',
+            from: process.env.WEBSITE_EMAIL as string,
             to: process.env.MY_EMAIL_ADDRESS as string,
             subject: topic,
             replyTo: email,

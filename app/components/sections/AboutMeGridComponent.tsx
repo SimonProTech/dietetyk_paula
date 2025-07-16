@@ -2,7 +2,7 @@
 
 import React from 'react'
 import DisableAnimationOnMobile from '@/app/components/global/DisableAnimationOnMobile'
-import { motion as m } from 'motion/react'
+import { motion as m } from 'framer-motion'
 import Link from 'next/link'
 import { CircleUser, GraduationCapIcon, MessageSquareHeart, Smile } from 'lucide-react'
 
@@ -42,7 +42,7 @@ const AboutMeGridComponent = () => {
             <div className="container w-full mx-auto pl-5 pr-5 relative">
                 <div className="grid grid-cols-1 xl:grid-cols-3 gap-10">
                     <div className="xl:col-span-2 col-span-1 row-span-1">
-                        <div className="flex flex-col justify-center dark:hover:shadow-md dark:shadow-pink-600 hover:shadow-xl transition-all duration-500 border-white dark:border-pink-400 dark:bg-black bg-white border-[1px] rounded md:p-12 p-8 h-full">
+                        <div className="flex flex-col justify-center dark:hover:shadow-md dark:shadow-pink-400 hover:shadow-xl transition-all duration-500 border-white dark:border-pink-300 dark:bg-black bg-white border-[1px] rounded-md md:p-12 p-8 h-full">
                             <DisableAnimationOnMobile>
                                 <m.h2
                                     initial={{
@@ -60,7 +60,7 @@ const AboutMeGridComponent = () => {
                                         delay: 0.2,
                                         duration: 0.3,
                                     }}
-                                    className="text-5xl mb-6 italic font-medium"
+                                    className="text-[40px] mb-6 font-bold"
                                 >
                                     Wartości kierujące moją pracą!
                                 </m.h2>
@@ -79,7 +79,7 @@ const AboutMeGridComponent = () => {
                                     transition={{
                                         delay: 0.3,
                                     }}
-                                    className="leading-10 text-lg font-light mb-10"
+                                    className="leading-10 text-lg mb-10"
                                 >
                                     Prawdziwa wartość w pracy polega na pasji, zaangażowaniu i
                                     dążeniu do doskonałości.
@@ -105,7 +105,7 @@ const AboutMeGridComponent = () => {
                                     }}
                                 >
                                     <Link
-                                        href="/oferta"
+                                        href="/#oferta"
                                         className="dark:bg-pink-500 bg-black py-4 mb-8 sm:mb-0 px-20 hover:bg-pink-500 dark:hover:bg-pink-600 transition-all duration-500 z-50 relative hover:rounded-sm text-white text-xl text-center"
                                     >
                                         Oferta
@@ -114,7 +114,7 @@ const AboutMeGridComponent = () => {
                             </DisableAnimationOnMobile>
                         </div>
                     </div>
-                    <div className="md:p-12 p-8 h-max m-auto border-white dark:hover:shadow-md dark:shadow-pink-600 hover:shadow-xl transition-all duration-500 dark:border-pink-400 border-[1px] dark:bg-black dark:border[1px] bg-white rounded">
+                    <div className="md:p-12 p-8 h-max m-auto border-white dark:hover:shadow-md dark:shadow-pink-400 hover:shadow-xl transition-all duration-500 dark:border-pink-300 border-[1px] dark:bg-black dark:border[1px] bg-white rounded-md">
                         <DisableAnimationOnMobile>
                             <m.div
                                 initial="initial"
@@ -132,7 +132,7 @@ const AboutMeGridComponent = () => {
                                 <GraduationCapIcon className="text-white" width={40} height={40} />
                             </m.div>
                             <m.h2
-                                className="font-bold text-3xl italic mb-5"
+                                className="font-bold text-3xl mb-5"
                                 initial="initial"
                                 whileInView="whileInView"
                                 variants={hVariants}
@@ -165,7 +165,7 @@ const AboutMeGridComponent = () => {
                             </m.p>
                         </DisableAnimationOnMobile>
                     </div>
-                    <div className="md:p-12 p-8 h-max m-auto border-white dark:hover:shadow-md dark:shadow-pink-600 hover:shadow-xl transition-all duration-500  dark:border-pink-400 border-[1px] dark:bg-black dark:border[1px] bg-white rounded">
+                    <div className="md:p-12 p-8 h-max m-auto border-white dark:hover:shadow-md dark:shadow-pink-400 hover:shadow-xl transition-all duration-500  dark:border-pink-300 border-[1px] dark:bg-black dark:border[1px] bg-white rounded-md">
                         <DisableAnimationOnMobile>
                             <m.div
                                 initial="initial"
@@ -184,7 +184,7 @@ const AboutMeGridComponent = () => {
                             </m.div>
                             <m.h2
                                 initial="initial"
-                                className="font-bold text-3xl italic mb-5"
+                                className="font-bold text-3xl mb-5"
                                 whileInView="whileInView"
                                 variants={hVariants}
                                 viewport={{
@@ -219,7 +219,7 @@ const AboutMeGridComponent = () => {
                             </m.p>
                         </DisableAnimationOnMobile>
                     </div>
-                    <div className="md:p-12 p-8 h-max m-auto dark:hover:shadow-md dark:shadow-pink-600 hover:shadow-xl transition-all duration-500  border-white dark:border-pink-400 border-[1px] dark:bg-black dark:border[1px] bg-white rounded">
+                    <div className="md:p-12 p-8 h-max m-auto dark:hover:shadow-md dark:shadow-pink-400 hover:shadow-xl transition-all duration-500  border-white dark:border-pink-300 border-[1px] dark:bg-black dark:border[1px] bg-white rounded-md">
                         <DisableAnimationOnMobile>
                             <m.div
                                 initial="initial"
@@ -237,7 +237,7 @@ const AboutMeGridComponent = () => {
                                 <Smile className="text-white" width={40} height={40} />
                             </m.div>
                             <m.h2
-                                className="font-bold text-3xl italic mb-5"
+                                className="font-bold text-3xl mb-5"
                                 initial="initial"
                                 whileInView="whileInView"
                                 variants={hVariants}
@@ -273,7 +273,7 @@ const AboutMeGridComponent = () => {
                             </m.p>
                         </DisableAnimationOnMobile>
                     </div>
-                    <div className="md:p-12 p-8 h-max m-auto dark:hover:shadow-md dark:shadow-pink-600 hover:shadow-xl transition-all duration-500  border-white dark:border-pink-400 border-[1px] dark:bg-black dark:border[1px] bg-white rounded">
+                    <div className="md:p-12 p-8 h-max m-auto dark:hover:shadow-md dark:shadow-pink-400 hover:shadow-xl transition-all duration-500  border-white dark:border-pink-300 border-[1px] dark:bg-black dark:border[1px] bg-white rounded-md">
                         <DisableAnimationOnMobile>
                             <m.div
                                 initial="initial"
@@ -291,7 +291,7 @@ const AboutMeGridComponent = () => {
                                 <CircleUser className="text-textColor" width={40} height={40} />
                             </m.div>
                             <m.h2
-                                className="font-bold text-3xl italic mb-5"
+                                className="font-bold text-3xl mb-5"
                                 initial="initial"
                                 whileInView="whileInView"
                                 variants={hVariants}

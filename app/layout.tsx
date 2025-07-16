@@ -7,6 +7,8 @@ import { metadata as defaultMetadata } from '@/utils/metadata-seo'
 import { Metadata } from 'next'
 import ProgressBarProvider from '@/app/components/global/progressBar-provider'
 import ShowMovingMenuOnDesktop from '@/app/components/global/ShowMovingMenuOnDesktop'
+import { ModalProvider } from '@/app/components/global/modal-nav-provider'
+import NavDrawer from '@/app/components/global/common/NavDrawer'
 export const metadata: Metadata = defaultMetadata
 
 export default function RootLayout({
@@ -17,12 +19,14 @@ export default function RootLayout({
     return (
         <html suppressHydrationWarning lang="pl">
             <body className={`antialiased`}>
+            <ModalProvider>
                 <ThemeProvider
                     defaultTheme="light"
                     enableSystem
                     disableTransitionOnChange
                     attribute="class"
                 >
+                    <NavDrawer/>
                     <Header />
                     {children}
                     <Footer />
@@ -30,6 +34,8 @@ export default function RootLayout({
                     <ProgressBarProvider />
                     <ShowMovingMenuOnDesktop />
                 </ThemeProvider>
+            </ModalProvider>
+
             </body>
         </html>
     )

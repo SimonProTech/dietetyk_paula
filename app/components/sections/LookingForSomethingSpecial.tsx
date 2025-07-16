@@ -23,7 +23,9 @@ const LookingForSomethingSpecial = () => {
 
     return (
         <>
-            <ScrollBottomMarqComponent />
+            <div className="sm:mt-0 mt-20">
+                <ScrollBottomMarqComponent textToMarquee="Przewiń w dół" />
+            </div>
             <section ref={sectionRef} style={{ height: '600vh' }} className="relative">
                 <div className="sticky top-0 flex justify-center h-screen items-center">
                     <motion.div
@@ -69,43 +71,42 @@ const LookingForSomethingSpecial = () => {
                                                     <h2 className="xl:text-2xl text-[1.5rem] dark:text-white text-black font-bold text-textColor text-left">
                                                         {offer.title}
                                                     </h2>
-                                                    <span className="font-bold text-[1.4rem] w-max text-pink-600">
+                                                    <span className="font-extrabold text-right text-2xl w-max dark:text-pink-400 text-pink-600">
                                                         {offer.currentPrice + ' PLN'}
                                                     </span>
                                                 </div>
-                                                <div className="flex flex-col gap-5 text-sm lg:p-6 min-[450px]:p-4 p-2  dark:text-whitetext-black">
-                                                    {offer.whatYouGet.map((item, index) => {
-                                                        return (
-                                                            <div
-                                                                key={index}
-                                                                className="flex min-[450px]:items-center items-start min-[450px]:flex-row flex-col gap-2 md:gap-5"
-                                                            >
-                                                                <HandHeart
-                                                                    className="text-pink-600"
-                                                                    size={23}
-                                                                />
-                                                                <span className="sm:text-[1rem] dark:text-white text-black font-normal text-sm min-[450px]:text-left">
-                                                                    {item}
-                                                                </span>
-                                                            </div>
-                                                        )
-                                                    })}
+                                                <div className="flex flex-col sm:mb-0 mb-8 gap-5 text-sm lg:p-6 min-[450px]:p-4 p-2  dark:text-whitetext-black">
+                                                    {offer.whatYouGet
+                                                        .slice(0, 5)
+                                                        .map((item, index) => {
+                                                            return (
+                                                                <div
+                                                                    key={index}
+                                                                    className="flex min-[450px]:items-center items-start min-[450px]:flex-row flex-col gap-2 md:gap-5"
+                                                                >
+                                                                    <HandHeart
+                                                                        className="text-pink-600 dark:text-pink-400 min-w-[25px]"
+                                                                        size={23}
+                                                                    />
+                                                                    <span className="sm:text-[1rem] dark:text-white text-black font-normal text-sm min-[450px]:text-left">
+                                                                        {item}
+                                                                    </span>
+                                                                </div>
+                                                            )
+                                                        })}
                                                 </div>
                                             </div>
+                                            <span className="dark:bg-zinc-700 bg-[#EAE9E3] absolute right-0  min-[450px]:right-1 text-sm text-pink-600 dark:text-pink-300 font-bold rounded-md min-[450px]:px-2 px-1 py-1 min-[450px]:py-1 bottom-0 min-[450px]:bottom-1">
+                                                Czytaj więcej
+                                            </span>
                                         </motion.div>
                                     </Link>
                                 )
                             })}
-                        <Link href="/oferta/" className="flex items-center">
-                            <motion.div
-                                style={{ opacity: opacityNewText }}
-                                className="text-white dark:bg-neutral-900 border cursor-pointer max-w-[600px] hover:border-pink-600 transition-border border-neutral-300 dark:border-neutral-700 rounded-2xl z-50 overflow-hidden shadow-xl relative lg:absolute bg-white left-0 lg:left-30 text-3xl p-2 font-thin"
-                            ></motion.div>
-                        </Link>
                     </motion.div>
                 </div>
             </section>
-            <div className="w-full h-60 bg-gradient-to-t dark:from-black/0 dark:to-black from-pink-200/0 to-pink-200" />
+            <div className="w-full dark:h-30 h-60 bg-gradient-to-t dark:from-pink-200 from-pink-200/0  to-pink-200" />
         </>
     )
 }

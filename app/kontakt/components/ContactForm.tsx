@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useCallback, useEffect, useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 
@@ -29,31 +29,8 @@ import { cn } from '@/lib/utils'
 import { toast } from 'sonner'
 import { LoaderCircle, MailCheck } from 'lucide-react'
 import { AnimatePresence, motion } from 'motion/react'
+import { contactFormSchema, topicsArray } from '@/utils/contact-schema-z'
 
-const topicsArray = [
-    'Chcę rozpocząć współpracę dietetyczną',
-    'Potrzebuję pomocy w doborze diety',
-    'Mam pytanie o konsultacje / pakiety',
-    'Inne – opowiem więcej w wiadomości',
-] as const
-
-const contactFormSchema = z.object({
-    firstName: z.string().nonempty({ message: 'Podaj swoje imię' }),
-    lastName: z.string().nonempty({
-        message: 'Podaj swoje nazwisko',
-    }),
-    email: z.string().email({
-        message: 'Podaj adres e-mail',
-    }),
-    topic: z.enum(topicsArray),
-    message: z
-        .string()
-        .min(10, { message: 'Wiadomość nie może być krótsza niż 10 znaków.' })
-        .max(500, {
-            message:
-                'Wiadomość nie może być dłuższa niż 500 znaków. Zachęcam do kontaktu mailowego.',
-        }),
-})
 
 export const ContactForm = () => {
     const intervalRef = React.useRef<NodeJS.Timeout | null>(null)
@@ -86,7 +63,6 @@ export const ContactForm = () => {
             })
             const data = await response.json()
 
-            console.log(data)
 
             if ((!response.ok || response?.status !== 200) && !data.error) {
                 let errorMessage = ''
@@ -105,7 +81,7 @@ export const ContactForm = () => {
                 return toast.error(errorMessage)
             }
             setIsSuccess(true)
-            form.reset()
+            // form.reset()
             return toast.success('Twoja wiadomość została wysłana.')
         } catch (e: any) {
             return toast.error(e.message || 'Coś poszło nie tak. Spróbuj ponownie.')
@@ -308,7 +284,8 @@ export const ContactForm = () => {
                             className={`transition-all flex justify-center`}
                         >
                             <Button
-                                className={`${cn(`font-bold rounded-none ${success ? 'rounded-md bg-green-500 hover:bg-green-600' : 'dark:hover:bg-pink-600 hover:bg-pink-400'} disabled:cursor-not-allowed disabled:rounded-md disabled:px-12 disabled:py-6 disabled:bg-black hover:rounded-md dark:hover:text-white  transition-all duration-500 uppercase text-lg px-12 py-6 cursor-pointer`)}`}
+                                className={`${cn(`font-bold rounded-none ${success ? 'rounded-md bg-green-500 dark:text-white hover:bg-green-600' : 'dark:hover:bg-pink-600 hover:bg-pink-400'}
+                                  disabled:cursor-not-allowed disabled:rounded-md disabled:px-12 disabled:py-6 dark:disabled:bg-white/40 hover:rounded-md  transition-all duration-500 uppercase text-lg px-12 py-6 cursor-pointer`)}`}
                                 size="lg"
                                 disabled={isLoading}
                                 type="submit"
@@ -321,7 +298,8 @@ export const ContactForm = () => {
                     ) : (
                         <div className={`transition-all flex justify-center`}>
                             <Button
-                                className={`${cn(`font-bold rounded-none ${success ? 'rounded-md bg-green-500 hover:bg-green-600' : 'dark:hover:bg-pink-600 hover:bg-pink-400'} disabled:cursor-not-allowed disabled:rounded-md disabled:px-12 disabled:py-6 disabled:bg-black hover:rounded-md dark:hover:text-white  transition-all duration-500 uppercase text-lg px-12 py-6 cursor-pointer`)}`}
+                                className={`${cn(`font-bold rounded-none ${success ? 'rounded-md bg-green-500 dark:text-white hover:bg-green-600' : 'dark:hover:bg-pink-600 hover:bg-pink-400'}
+                                  disabled:cursor-not-allowed disabled:rounded-md disabled:px-12 disabled:py-6 dark:disabled:bg-white/40 hover:rounded-md  transition-all duration-500 uppercase text-lg px-12 py-6 cursor-pointer`)}`}
                                 size="lg"
                                 disabled={isLoading}
                                 type="submit"

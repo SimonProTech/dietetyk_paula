@@ -106,27 +106,8 @@ input:-webkit-autofill:active{
     animation: animate-bounce-down-Y 0.6s ease-in-out infinite alternate;
 }
 
-.custom-grid {
-    content: "";
-    position: absolute;
-    top: 10%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: 10% 20%; /* Tworzymy 10x10 siatkę */
-    pointer-events: none; /* Uniemożliwia interakcje z siatką */
-}
 
-.custom-grid-sm {
-    content: "";
-    position: absolute;
-    top: 10%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: 20% 40%; /* Tworzymy 10x10 siatkę */
-    pointer-events: none; /* Uniemożliwia interakcje z siatką */
-}
+
 
 .bg-url {
     background-image: url("../public/assets/landingPageAssets/paula3.png");

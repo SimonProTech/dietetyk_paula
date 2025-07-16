@@ -5,7 +5,11 @@ import Marquee from 'react-fast-marquee'
 import { Dot } from 'lucide-react'
 import useCurrentTheme from '@/app/hooks/useCurrentTheme'
 
-const ScrollBottomMarqComponent = () => {
+interface ScrollBottomMarqComponentI {
+    textToMarquee: string
+}
+
+const ScrollBottomMarqComponent = ({ textToMarquee }: ScrollBottomMarqComponentI) => {
     const { theme } = useCurrentTheme()
     return (
         <div className="flex pt-0 md:pt-20 items-center justify-center mx-auto w-[400px]">
@@ -19,11 +23,11 @@ const ScrollBottomMarqComponent = () => {
             >
                 <div className="flex items-center space-x-2 min-w-[400px]">
                     <Dot size={30} className="dark:text-pink-600 text-pink-400" />
-                    <span className="tracking-wider uppercase">Przewiń w dół</span>
+                    <span className="tracking-wider uppercase">{textToMarquee}</span>
                     <Dot size={30} className="dark:text-pink-600 text-pink-400" />
-                    <span className="tracking-wider uppercase">Przewiń w dół</span>
+                    <span className="tracking-wider uppercase">{textToMarquee}</span>
                     <Dot size={30} className="dark:text-pink-600 text-pink-400" />
-                    <span className="tracking-wider uppercase">Przewiń w dół</span>
+                    <span className="tracking-wider uppercase">{textToMarquee}</span>
                 </div>
             </Marquee>
         </div>

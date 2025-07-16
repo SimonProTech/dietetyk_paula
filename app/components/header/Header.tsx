@@ -3,6 +3,7 @@
 import HeaderLogo from '@/app/components/header/HeaderLogo'
 import HeaderDesktop from '@/app/components/header/HeaderDesktop'
 import HeaderMobile from '@/app/components/header/HeaderMobile'
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
     return (
