@@ -110,7 +110,7 @@ const SectionFaq = () => {
                                                 transition-colors duration-200
                                             "
                                         >
-                                            {faq.id > 9 ? faq.id : `${faq.id}`}) {faq.question}
+                                            {faq.question}
                                         </AccordionTrigger>
 
                                         <AccordionContent className="px-8 py-6 text-[16px] bg-pink-50 dark:bg-[#2a2a2a] text-[#333] font-medium dark:text-[#ddd]">
@@ -157,7 +157,7 @@ const SectionFaq = () => {
                                                 transition-colors duration-200
                                             "
                                         >
-                                            {faq.id > 9 ? faq.id : `${faq.id}`}) {faq.question}
+                                            {faq.question}
                                         </AccordionTrigger>
 
                                         <AccordionContent className="px-8 py-6 text-[16px] bg-pink-50 dark:bg-[#2a2a2a] text-[#333] font-medium dark:text-[#ddd]">

@@ -7,6 +7,7 @@ import HeaderLogo from '@/app/components/header/HeaderLogo'
 import { InstagramIcon, XIcon } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
+import DarkModeToggle from '@/app/components/header/DarkModelToggle'
 
 const NavDrawer = () => {
     const context = useContext(ModalContext)
@@ -40,7 +41,11 @@ const NavDrawer = () => {
                         className="fixed bottom-0 border-t-zinc-600 border-t-[1px] left-0 w-full h-[75vh] min-[800px]:h-[55vh] bg-[#efefef] dark:bg-[#0a0a0a] z-[9999999999999999999] p-4"
                     >
                         <div className='p-4 h-full relative flex justify-between items-center flex-col gap-5'>
-                            <XIcon onClick={context?.closeModal} className='absolute cursor-pointer right-0 top-0'/>
+                            <div className='absolute right-0 flex gap-4 items-center'>
+                                <DarkModeToggle/>
+                                <XIcon onClick={context?.closeModal} className='hover:scale-125 transition-all cursor-pointer'/>
+                            </div>
+
                             <div className='flex justify-center items-center'>
                                 <HeaderLogo  />
                             </div>
