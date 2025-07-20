@@ -80,7 +80,7 @@ const OfertaCTA = () => {
                 {/* Scroll-triggered element */}
             </section>
             <motion.div
-                className="sm:absolute hidden bottom-30 right-20 mt-40"
+                className="absolute hidden sm:block bottom-30 right-20 mt-40"
             >
                 <motion.svg
                     viewBox="0 0 200 200"
