@@ -12,7 +12,6 @@ import {
 } from '@react-email/components'
 import { EmailBody } from '@/types/app'
 
-const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : ''
 
 export const ContactFormEmailTemplate = ({
     message,
@@ -27,7 +26,7 @@ export const ContactFormEmailTemplate = ({
         <Body style={main}>
             <Container style={container}>
                 <Img
-                    src={`${baseUrl}/assets/logo.png`}
+                    src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/assets/logo.png`}
                     width="170"
                     height="50"
                     alt="Logo serwisu dietetykpaulaantoniak"
