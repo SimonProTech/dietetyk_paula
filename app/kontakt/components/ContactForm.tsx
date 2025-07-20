@@ -254,7 +254,7 @@ export const ContactForm = () => {
                                     bounce: 0.5,
                                     type: 'spring',
                                 }}
-                                className="absolute top-0 left-0 right-0 dark:bg-pink-700 bg-pink-300 px-5 py-2 dark:text-white text-black"
+                                className="absolute top-0 left-0 right-0 dark:bg-pink-600 bg-pink-300 px-5 py-2 dark:text-white text-black"
                             >
                                 {errorMessage} W razie dodatkowych pytań zachęcam do bezpośredniego
                                 kontaktu na adres e-mail{' '}
@@ -264,7 +264,7 @@ export const ContactForm = () => {
                                     href={`mailto:${process.env.NEXT_PUBLIC_EMAIL_ADDRESS}`}
                                     rel="noreferrer"
                                 >
-                                    kontakt@dietetykpaula.pl (kliknij)
+                                    {process.env.NEXT_PUBLIC_PERSONAL_EMAIL_TO_CONTAT} (kliknij)
                                 </a>
                                 <span
                                     title="Czas do zamknięcia się okna"
