@@ -33,13 +33,14 @@ export async function POST(req: Request) {
         const { message, topic, email, lastName, firstName } = (await req.json()) as EmailBody
         const { data, error } = await resend.emails.send({
             from: process.env.WEBSITE_EMAIL as string,
-            to: process.env.WEBSITE_EMAIL as string,
+            to: process.env.PERSONAL_EMAIL_TO_CONTAT as string,
             subject: topic,
             replyTo: email,
             react: ContactFormEmailTemplate({ message, topic, firstName, lastName, email }),
         })
 
-        if (error || !data?.id) {
+
+        if (!data || error || !data?.id) {
             return Response.json({ error }, { status: 500 })
         }
 
