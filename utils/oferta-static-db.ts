@@ -131,7 +131,7 @@ jadłospis stanowi klucz do osiągnięcia Twoich celów zdrowotnych oraz żywien
         endY: -200,
         show: true,
         ogImage: '/assets/og/jadlospis-7.png',
-        lastModified: '22025-07-21',
+        lastModified: '2025-07-21',
     },
     {
         id: 5,
