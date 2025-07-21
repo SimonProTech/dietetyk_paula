@@ -11,6 +11,7 @@ export interface OfertaStaticDbI {
     startY?: number
     endY?: number
     show: boolean
+    ogImage: string;
 }
 
 export const ofertaStaticDb: OfertaStaticDbI[] = [
@@ -40,6 +41,7 @@ suplementacji.`,
         startY: 100,
         endY: -100,
         show: true,
+        ogImage: '/assets/og/konsultacja-wstepna.png'
     },
     {
         id: 2,
@@ -66,6 +68,7 @@ czy jadłospisu w razie wystąpienia takiej potrzeby.`,
         startY: 20,
         endY: -250,
         show: true,
+        ogImage: '/assets/og/konsultacja-kontrolna.png'
     },
     {
         id: 3,
@@ -94,6 +97,7 @@ dotychczasowej diety.`,
         startY: -100,
         endY: -60,
         show: true,
+        ogImage: '/assets/og/jadlospis-14.png'
     },
     {
         id: 4,
@@ -122,6 +126,7 @@ jadłospis stanowi klucz do osiągnięcia Twoich celów zdrowotnych oraz żywien
         startY: 600,
         endY: -200,
         show: true,
+        ogImage: '/assets/og/jadlospis-7.png'
     },
     {
         id: 5,
@@ -160,5 +165,6 @@ kontrolować postępy oraz wprowadzać ewentualne modyfikacje.
         `,
         howLongConsultationTime: '50-60',
         show: false,
+        ogImage: '/assets/og/pakiet-7.png'
     },
 ]

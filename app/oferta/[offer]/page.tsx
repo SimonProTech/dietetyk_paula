@@ -36,7 +36,7 @@ export const generateMetadata = async ({ params }:BlogPostPageProps ) => {
                 url: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/oferta/${title}`,
                 images: [
                     {
-                        url: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/assets/not-found.svg`,
+                        url: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/assets/og/not-found.png`,
                         width: 1200,
                         height: 630,
                         alt: 'Brak oferty',
@@ -47,7 +47,7 @@ export const generateMetadata = async ({ params }:BlogPostPageProps ) => {
                 card: 'summary_large_image',
                 title: 'Nie znaleziono oferty',
                 description: 'Strona, której szukasz, nie istnieje.',
-                images: [`${process.env.NEXT_PUBLIC_WEBSITE_URL}/assets/not-found.svg`],
+                images: [`${process.env.NEXT_PUBLIC_WEBSITE_URL}/assets/og/not-found.png`],
             },
         }
     }
@@ -84,8 +84,8 @@ export const generateMetadata = async ({ params }:BlogPostPageProps ) => {
             images: [
                 {
                     url:
-                        fetchOffer.url ||
-                        `${process.env.NEXT_PUBLIC_WEBSITE_URL}/assets/og_default_image.png`,
+                        fetchOffer.ogImage ||
+                        `${process.env.NEXT_PUBLIC_WEBSITE_URL}/assets/og/og-default.png`,
                     width: 1200,
                     height: 630,
                     alt: fetchOffer.title,
@@ -96,7 +96,7 @@ export const generateMetadata = async ({ params }:BlogPostPageProps ) => {
             card: 'summary_large_image',
             title: fetchOffer.title,
             description: fetchOffer.shortDescription,
-            images: [fetchOffer.url || `${process.env.NEXT_PUBLIC_WEBSITE_URL}/assets/og_default_image.png`],
+            images: [fetchOffer.ogImage || `${process.env.NEXT_PUBLIC_WEBSITE_URL}/assets/og/og-default.png`],
         },
     }
 }

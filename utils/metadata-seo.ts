@@ -22,12 +22,12 @@ export const metadata: Metadata = {
             'Jestem dietetykiem oferującym spersonalizowane jadłospisy i konsultacje online. Pomagam w osiągnięciu celów żywieniowych i zdrowego stylu życia.',
         images: [
             {
-                url: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/assets/og_default_image.png`,
+                url: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/assets/og/og-default.png`,
                 alt: 'Zachęcający obraz przedstawiający zdrowe i kolorowe danie, idealne dla każdego, kto dąży do lepszego żywienia. Przygotowane z najświeższych składników, z miłością do smaku i dobroci.',
                 type: 'image/jpg',
                 width: 1200,
                 height: 630,
-                secureUrl: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/assets/og_default_image.png`,
+                secureUrl: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/assets/og/og-default.png`,
             },
         ],
     },
