@@ -12,6 +12,7 @@ export interface OfertaStaticDbI {
     endY?: number
     show: boolean
     ogImage: string;
+    lastModified: string;
 }
 
 export const ofertaStaticDb: OfertaStaticDbI[] = [
@@ -41,7 +42,8 @@ suplementacji.`,
         startY: 100,
         endY: -100,
         show: true,
-        ogImage: '/assets/og/konsultacja-wstepna.png'
+        ogImage: '/assets/og/konsultacja-wstepna.png',
+        lastModified: '21.07.2025',
     },
     {
         id: 2,
@@ -68,7 +70,8 @@ czy jadłospisu w razie wystąpienia takiej potrzeby.`,
         startY: 20,
         endY: -250,
         show: true,
-        ogImage: '/assets/og/konsultacja-kontrolna.png'
+        ogImage: '/assets/og/konsultacja-kontrolna.png',
+        lastModified: '21.07.2025',
     },
     {
         id: 3,
@@ -97,7 +100,8 @@ dotychczasowej diety.`,
         startY: -100,
         endY: -60,
         show: true,
-        ogImage: '/assets/og/jadlospis-14.png'
+        ogImage: '/assets/og/jadlospis-14.png',
+        lastModified: '21.07.2025',
     },
     {
         id: 4,
@@ -126,7 +130,8 @@ jadłospis stanowi klucz do osiągnięcia Twoich celów zdrowotnych oraz żywien
         startY: 600,
         endY: -200,
         show: true,
-        ogImage: '/assets/og/jadlospis-7.png'
+        ogImage: '/assets/og/jadlospis-7.png',
+        lastModified: '21.07.2025',
     },
     {
         id: 5,
@@ -165,6 +170,7 @@ kontrolować postępy oraz wprowadzać ewentualne modyfikacje.
         `,
         howLongConsultationTime: '50-60',
         show: false,
-        ogImage: '/assets/og/pakiet-7.png'
+        ogImage: '/assets/og/pakiet-7.png',
+        lastModified: '21.07.2025',
     },
 ]
