@@ -56,7 +56,7 @@ export const ContactFormEmailTemplate = ({
 
                 <Text style={footer}>
                     Wiadomość przesłana z serwisu{' '}
-                    <a href="https://dietetykpaulaantoniak.pl">dietetykpaulaantoniak.pl</a>
+                    <a href={process.env.NEXT_PUBLIC_WEBSITE_URL}>dietetykpaula.pl</a>
                 </Text>
             </Container>
         </Body>
