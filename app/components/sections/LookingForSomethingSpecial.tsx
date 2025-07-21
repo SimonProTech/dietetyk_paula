@@ -32,8 +32,12 @@ const LookingForSomethingSpecial = () => {
                         style={{
                             x: saladX,
                             rotate,
+                            backgroundImage: `url('${process.env.NEXT_PUBLIC_WEBSITE_URL}/assets/salad.png')`,
+                            backgroundRepeat: 'no-repeat',
+                            backgroundSize: 'contain',
+                            backgroundPosition: 'center',
                         }}
-                        className="bg-no-repeat bg-contain z-90 sm:absolute min-[930px]:h-[70vh] min-[880px]:right-40 min-[1200px]:right-auto bg-center w-0 h-0  min-[930px]:w-[40vw] bg-[url('http://localhost:3000/assets/salad.png')]"
+                        className={`z-90 sm:absolute min-[930px]:h-[70vh] min-[880px]:right-40 min-[1200px]:right-auto w-0 h-0  min-[930px]:w-[40vw]`}
                     />
                     <div className="h-full flex z-10 justify-center items-center w-full">
                         <h2 className="pt-0 lg:leading-0 leading-16 text-5xl text-center md:text-left font-thin">
