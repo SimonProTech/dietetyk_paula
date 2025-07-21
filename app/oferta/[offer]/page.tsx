@@ -96,7 +96,7 @@ export const generateMetadata = async ({ params }:BlogPostPageProps ) => {
             card: 'summary_large_image',
             title: fetchOffer.title,
             description: fetchOffer.shortDescription,
-            images: [fetchOffer.url || 'https://twojadomena.pl/images/default-og.jpg'],
+            images: [fetchOffer.url || `${process.env.NEXT_PUBLIC_WEBSITE_URL}/assets/og_default_image.png`],
         },
     }
 }
